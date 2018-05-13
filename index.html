@@ -1,127 +1,165 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Menu circular com CSS3</title>
-<style>
+<!--
+  Generated template for the FeedPage page.
 
-*{
-	margin: 0;
-	padding: 0;
-}
-body{
-	background-color: #414950;
-}
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
 
-nav{
-	margin: 150px auto;
-	width: 450px;
-	height: 450px;
-}
+  <ion-navbar>
+    <ion-title>Feed</ion-title>
+  </ion-navbar>
 
-#check{
-	display: nome;
-}
-
-#central{
-	cursor: pointer;
-	width: 150px;
-	height: 150px;
-	position: absolute;
-	margin: 70px 150px;
-	z-index: 1;
-}
-
-#central img{
-	width: 100%;
-	text-transform: all .2s ease-in-out;
-	border-radius: 50%;
-}
-
-.link{
-	position: absolute;
-	margin: 195px 195px;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	transition: all .3s ease-in-out;
-}
-
-#check:checked ~ a #link_01{
-	margin-top: 270px;
-	transform: translateY(-195px);
-	transition-delay: .1s;
-}
-
-#check:checked ~ a #link_02{
-	margin-right: 70px;
-	margin-top: 110px;
-	transform: translateX(90px);
-	transition-delay: .2s;
-}
-
-#check:checked ~ a #link_05{
-	margin-right: 20px;
-	margin-top: 280px;
-	transform: translateX(90px);
-	transition-delay: .3s;
-}
-
-#check:checked ~ a #link_06{
-	margin-top: 315px;
-	transition-delay: .4s;
-}
-
-#check:checked ~ a #link_07{
-	margin-left: 30px;
-	margin-top: 280px;
-	transform: translateX(80px);
-	transition-delay: .5s;
-}
-
-#check:checked ~ a #link_08{
-	margin-right: 30px;
-	margin-top: 195px;
-	transform: translateX(125px);
-	transition-delay: .6s;
-}
-
-#check:checked ~ a #link_09{
-	margin-left: 17px;
-	margin-top: 195px;
-	transform: translateX(55px);
-	transition-delay: .7s;
-}
-
-#check:checked ~ a #link_10{
-	margin-left: 30px;
-	margin-top: 110px;
-	transform: translateX(80px);
-	transition-delay: .8s;
-}
-
-#check:checked ~ #central img{
-	transform: rotate(45deg);	
-}
-
-</style>
-</head>
-<body>
-
-<nav>
-
-	<input type="checkbox" id="check"/>
-	<label id="central" for ="check"><img src="central2.png"/></label>
-	<a href="#"><img class="link" id="link_01" src="1.png"/></a>
-	<a href="#"><img class="link" id="link_02" src="2.png"/></a>
-	<a href="#"><img class="link" id="link_05" src="5.png"/></a>
-	<a href="#"><img class="link" id="link_06" src="6.png"/></a>
-	<a href="#"><img class="link" id="link_07" src="7.png"/></a>
-	<a href="#"><img class="link" id="link_08" src="8.png"/></a>
-	<a href="#"><img class="link" id="link_09" src="9.png"/></a>
-	<a href="#"><img class="link" id="link_10" src="10.png"/></a>
+</ion-header>
 
 
-</navi>
+<ion-content>
 
-</body>
-</html>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin:0px;
+      padding:0px;
+    }
+
+    nav {      
+      margin: 0px auto;
+      width: 100%;
+      height: 100%;
+    }
+
+    #check {
+      position:absolute;
+      margin-left:50%;
+      margin-top:50%;
+      display: block;
+    }
+
+    #central {
+      cursor: pointer;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      margin-left:50%;
+      left:-75px;
+      margin-top:50%;
+      top: -75px;
+      z-index: 1;
+      transition:0.7s;
+    }
+
+    #central img {
+      width: 100%;
+      /*text-transform: all .2s ease-in-out;*/
+      border-radius: 50%;
+      transition:0.7s;
+    }
+
+    .link {
+      position: absolute;
+      margin: 195px 195px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      transition: all .3s ease-in-out;
+    }
+
+    #check:checked~a #link_01 {
+      margin-top: 270px;
+      transform: translateY(-195px);
+      transition-delay: .1s;
+    }
+
+    #check:checked~a #link_02 {
+      margin-right: 70px;
+      margin-top: 110px;
+      transform: translateX(90px);
+      transition-delay: .2s;
+    }
+
+    #check:checked~a #link_05 {
+      margin-right: 20px;
+      margin-top: 280px;
+      transform: translateX(90px);
+      transition-delay: .3s;
+    }
+
+    #check:checked~a #link_06 {
+      margin-top: 315px;
+      transition-delay: .4s;
+    }
+
+    #check:checked~a #link_07 {
+      margin-left: 30px;
+      margin-top: 280px;
+      transform: translateX(80px);
+      transition-delay: .5s;
+    }
+
+    #check:checked~a #link_08 {
+      margin-right: 30px;
+      margin-top: 195px;
+      transform: translateX(125px);
+      transition-delay: .6s;
+    }
+
+    #check:checked~a #link_09 {
+      margin-left: 17px;
+      margin-top: 195px;
+      transform: translateX(55px);
+      transition-delay: .7s;
+    }
+
+    #check:checked~a #link_10 {
+      margin-left: 30px;
+      margin-top: 110px;
+      transform: translateX(80px);
+      transition-delay: .8s;
+    }
+
+    #check:checked~#central img {
+      transform: rotate(360deg);
+      transition:0.7s;
+    }
+  </style>
+
+  <body>
+     
+    <nav>
+      <input type="checkbox" id="check" />
+      <label id="central" for="check">
+        <img src="../../assets/images/central2.png"/>
+      </label>
+      <a href="#">
+        <img class="link" id="link_01" src="../../assets/images/1.png" />
+      </a>
+      <a href="#">
+        <img class="link" id="link_02" src="../../assets/images/2.png" />
+      </a>
+      <a href="#">
+        <img class="link" id="link_05" src="../../assets/images/5.png" />
+      </a>
+      <a href="#">
+        <img class="link" id="link_06" src="../../assets/images/6.png" />
+      </a>
+      <a href="#">
+        <img class="link" id="link_07" src="../../assets/images/7.png" />
+      </a>
+      <a href="#">
+        <img class="link" id="link_08" src="../../assets/images/8.png" />
+      </a>
+      <a href="#">
+        <img class="link" id="link_09" src="../../assets/images/9.png" />
+      </a>
+      <a href="#">
+        <img class="link" id="link_10" src="../../assets/images/10.png" />
+      </a>
+    </nav>
+
+  </body>
+
+</ion-content>
