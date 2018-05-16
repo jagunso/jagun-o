@@ -1,0 +1,28 @@
+<ion-content style="background:url(assets/imgs/login2.jpg) no-repeat center;background-size:cover;">
+  <ion-card>
+      <ion-card-header>
+       
+        Cadastre-se!
+  
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list no-line>
+          <ion-item>
+            <ion-input type="text" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Senha" [(ngModel)]="user.password"></ion-input>
+          </ion-item>
+          <button ion-button color="facebook" block (click)="cadastrar(user)">
+              <div style="text-transform: capitalize"> Cadastrar</div>
+            </button>
+            <div class="spacer" style="width: auto; height:5px;"></div>
+            <a  on-click="goToLogin()">
+            <button ion-button color="google" block>
+                <div style="text-transform: capitalize"> Cancelar</div>
+              </button></a>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>

@@ -1,0 +1,81 @@
+<html>
+<head> 
+<style> 
+ .home-container {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    height: 20%;
+ 
+}
+.home-container > .row {
+    -webkit-flex: 1;
+}
+
+
+
+
+
+.header {
+    -webkit-flex: 1.5 !important;
+    -webkit-align-items: center;
+    background-image:url(assets/imgs/form4.png);
+    height: 20%;
+}
+.inputs{
+        background: rgba(255, 255, 255, 0.5);;
+    }
+</style>
+
+
+
+</head>
+
+
+    <body ng-app="starter" scroll="false" style="background:url(assets/imgs/login.jpg) no-repeat center;background-size:cover;">
+      <div class="row header">
+
+        <div class="col text-center">
+
+        </div>
+      </div>
+
+      <div class="spacer" style="width:300px;height:10px;" id="Remocao-spacer4"></div>
+      <form  id="Remocao-form5">
+        <ion-item id="Remocao-input15" class="inputs">
+          <ion-label color="dark" >
+            Nome:
+          </ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item id="Remocao-input16"class="inputs">
+          <ion-label color="dark" >
+            Rua:
+          </ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item id="Remocao-input17"class="inputs">
+          <ion-label color="dark" >
+            Bairro:
+          </ion-label>
+          <ion-input type="text" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item id="Remocao-input18"class="inputs">
+          <ion-label color="dark" >
+            Telefone:
+          </ion-label>
+          <ion-input type="tel" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item id="Remocao-textarea3"class="inputs">
+          <ion-label color="dark" >
+            Mensagem:
+          </ion-label>
+          <ion-textarea placeholder=""></ion-textarea>
+        </ion-item>
+      </form>
+      <div class="spacer" style="width:300px;height:10px;" id="Remocao-spacer4"></div>
+
+      <button id="Remocao-button6" ion-button color="primary" block >
+        Enviar Denúncia
+      </button>
+    </body>
+</html> 

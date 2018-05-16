@@ -1,0 +1,57 @@
+<ion-content style="background:url(assets/imgs/login2.jpg) no-repeat center;background-size:cover;">
+  <ion-card>
+    <ion-card-header>
+     
+      Bem-vindo ao Calendário JPB
+
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-line>
+        <ion-item>
+          <ion-input type="text" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Senha" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+        <p text-right ion-text color="user" tappable (click)="forgotPass()">
+          <strong>Esqueceu a senha?</strong>
+        </p>
+        <button ion-button block outline color="light" (click)="login(user)">
+          <div style="text-transform: capitalize"> Fazer Login</div>
+        </button>
+
+        <p text-center ion-text color="dark">Ou entre com:</p>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col col-4>
+              <button ion-button color="facebook" icon-only block class="btn-facebook" (click)='loginfc()'>
+                <ion-icon name="logo-facebook"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col col-4>
+              <button ion-button color="google" icon-only block class="btn-gplus">
+                <ion-icon name="logo-googleplus"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col col-4>
+              <button ion-button color="user" icon-only block class="btn-user">
+                <ion-icon name="ios-contact"></ion-icon>
+              </button>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+     
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <button class="bottom" ion-button clear full color="light" block (click)="cadastrar()">
+    <div style="text-transform: capitalize"> 
+    <strong>  Criar uma conta</strong>
+    
+    </div>
+  </button>
+
+</ion-content>

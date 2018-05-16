@@ -1,0 +1,46 @@
+page-estacionamento {
+
+    .inputs{
+        background: rgba(255, 255, 255, 0.5);;
+    }
+ 
+    /*daqi*/
+    ion-navbar{
+        transition: all .3s;
+        .back-button,.bar-button{
+          //text-shadow: 0 0 5px #000000;
+          color: #fff;
+        }
+      }
+    
+      .header-md::after{
+        background-image: none;
+      }
+    
+      .header-ios .toolbar-background-ios,.toolbar-background-md,.toolbar-background-wp{
+        border-style: none;
+        background: none;
+        border-color: rgba(0, 0, 0, 0)
+    
+      }
+    
+    
+      .show-background{
+        border-style: none;
+        background: #3db5e7;
+      }
+    
+     
+    
+      .content{
+        background: transparent;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        
+    
+      }
+
+
+
+}

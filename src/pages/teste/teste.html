@@ -1,0 +1,388 @@
+<!--
+  Generated template for the TestePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>teste</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding ng-app="starter" scroll="false" style="background:url(assets/imgs/bg.jpg) no-repeat center;background-size:cover;">
+    <style>
+        .selector {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 140px;
+          height: 140px;
+          margin-top: -70px;
+          margin-left: -70px;
+        }
+    
+        .selector,
+        .selector button {
+          font-family: 'Oswald', sans-serif;
+          font-weight: 300;
+        }
+    
+        .selector button {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          background: #428bca;
+          border-radius: 50%;
+          border: 0;
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+          transition: all .1s;
+        }
+    
+        .selector button:hover {
+          background: #3071a9;
+        }
+    
+        /*Botão Principal Azul*/
+    
+        .selector button:focus {
+          outline: none;
+        }
+    
+        .selector ul {
+          position: absolute;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          top: -20px;
+          right: -20px;
+          bottom: -20px;
+          left: -20px;
+        }
+    
+        .selector li {
+          position: absolute;
+          width: 0;
+          height: 100%;
+          margin: 0 50%;
+          -webkit-transform: rotate(-360deg);
+          transition: all 0.8s ease-in-out;
+        }
+    
+        .selector li input {
+          display: none;
+        }
+    
+        .selector li input+label {
+          position: absolute;
+          left: 50%;
+          bottom: 100%;
+          width: 0;
+          height: 0;
+          line-height: 1px;
+          margin-left: 0;
+          border-radius: 50%;
+          text-align: center;
+          font-size: 1px;
+          overflow: hidden;
+          cursor: pointer;
+          box-shadow: none;
+          transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+        }
+    
+        .selector li input+label:hover {}
+    
+        /*COR PRINCIPAL CINZA*/
+    
+        .selector li input:checked+label {
+    
+          color: white;
+        }
+    
+    
+    
+        .selector.open li input+label {
+          width: 80px;
+          height: 80px;
+          line-height: 80px;
+          margin-left: -40px;
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+          font-size: 14px;
+        }
+    
+    
+    
+        /*Imagens*/
+    
+        input[type=checkbox] {
+          display: none;
+        }
+    
+        input[type=checkbox]+label {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 25px;
+          width: 25px;
+          display: inline-block;
+        }
+    
+    
+        input#input_1_0+label {
+          background-image: url(assets/imgs/1.png);
+        }
+    
+        input#input_1_0:checked+label {
+          background-image: url(assets/imgs/1e.png);
+        }
+    
+        input#input_1_1+label {
+          background-image: url(assets/imgs/2.png);
+        }
+    
+        input#input_1_1:checked+label {
+          background-image: url(assets/imgs/2e.png);
+        }
+    
+    
+        input#input_1_2+label {
+          background-image: url(assets/imgs/3.png);
+        }
+    
+        input#input_1_2:checked+label {
+          background-image: url(assets/imgs/3e.png);
+        }
+    
+    
+        input#input_1_3+label {
+          background-image: url(assets/imgs/4.png);
+        }
+    
+        input#input_1_3:checked+label {
+          background-image: url(assets/imgs/4e.png);
+        }
+    
+    
+        input#input_1_4+label {
+          background-image: url(assets/imgs/5e.png);
+        }
+    
+        input#input_1_4:checked+label {
+          background-image: url(assets/imgs/5epng.png);
+        }
+    
+        input#input_1_5+label {
+          background-image: url(assets/imgs/6.png);
+        }
+    
+        input#input_1_5:checked+label {
+          background-image: url(assets/imgs/6e.png);
+        }
+    
+    
+    
+        input#input_1_6+label {
+          background-image: url(assets/imgs/7.png);
+        }
+    
+        input#input_1_6:checked+label {
+          background-image: url(assets/imgs/7e.png);
+        }
+    
+    
+        input#input_1_7+label {
+          background-image: url(assets/imgs/8.png);
+        }
+    
+        input#input_1_7:checked+label {
+          background-image: url(assets/imgs/8e.png);
+        }
+    
+    
+        input#input_1_8+label {
+          background-image: url(assets/imgs/9.png);
+        }
+    
+        input#input_1_8:checked+label {
+          background-image: url(assets/imgs/9e.png);
+        }
+    
+        input#input_1_9+label {
+          background-image: url(assets/imgs/10.png);
+        }
+    
+        input#input_1_9:checked+label {
+          background-image: url(assets/imgs/10e.png);
+        }
+      </style>
+    
+    
+    
+   
+    
+    
+    
+    
+      <section class="home-container">
+    
+        <div class="row header">
+    
+          <div class="col text-center">
+    
+          </div>
+        </div>
+    
+    
+    
+    
+        <div class='selector'>
+          <ul>
+            <!-- Primeiro-->
+    
+    
+            <li><a style="display:block;" on-click="goToSeguranca()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_0" />
+              <label for="input_1_0"></label></a>
+    
+            </li>
+    
+            <!-- Segundo -->
+            <li><a style="display:block;" on-click="goToIluminacao()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_1" />
+              <label for="input_1_1"></label></a>
+    
+            </li>
+    
+            <!-- Terceiro -->
+            <li><a style="display:block;" on-click="goToEstacionamento()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_2" />
+              <label for="input_1_2"></label></a>
+    
+            </li>
+            <!-- Quarto -->
+            <li><a style="display:block;" on-click="goToRemocao()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_3" />
+              <label for="input_1_3"></label></a>
+    
+            </li>
+    
+            <!--Quinto-->
+            <li><a style="display:block;" on-click="goToLimpeza()">
+            <input type='checkbox' name='q1_myOptions[]' id="input_1_4" />
+              <label for="input_1_4"> </label> </a>
+            </li>
+    
+            <!-- Sexto eRRO-->
+            <li><a style="display:block;" on-click="goToTransito()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_5" />
+              <label for="input_1_5"></label></a>
+            </li>
+    
+            <!-- Sétimo -->
+            <li><a style="display:block;" on-click="goToMosquito()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_6" />
+              <label for="input_1_6"></label></a>
+    
+            </li>
+    
+            <!-- Oitavo -->
+    
+            <li><a style="display:block;" on-click="goToBuracos()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_7" />
+              <label for="input_1_7"></label></a>
+    
+            </li>
+    
+            <!-- Nono -->
+            <li><a style="display:block;" on-click="goToOcupacao()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_8" />
+              <label for="input_1_8"></label></a>
+    
+            </li>
+    
+            <!--Décimo -->
+            <li><a style="display:block;" on-click="goToOutros()">
+              <input type='checkbox' name='q1_myOptions[]' id="input_1_9" />
+              <label for="input_1_9"></label></a>
+    
+            </li>
+    
+    
+    
+          </ul>
+          <button>Calendário JPB
+          </button>
+    
+        </div>
+    
+
+<!--SCRIPT JQUERY ANIMAÇÃO-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>var nbOptions = 8;
+  var angleStart = -360;
+
+  // jquery rotação animação
+  function rotate(li, d) {
+    $({ d: angleStart }).animate({ d: d }, {
+      step: function (now) {
+        $(li)
+          .css({ transform: 'rotate(' + now + 'deg)' })
+          .find('label')
+          .css({ transform: 'rotate(' + (-now) + 'deg)' });
+      }, duration: 0
+    });
+  }
+
+  // Animação Slide
+  function toggleOptions(s) {
+    $(s).toggleClass('open');
+    var li = $(s).find('li');
+    var deg = $(s).hasClass('half') ? 180 / (li.length - 1) : 360 / li.length;
+    for (var i = 0; i < li.length; i++) {
+      var d = $(s).hasClass('half') ? (i * deg) - 90 : i * deg;
+      $(s).hasClass('open') ? rotate(li[i], d) : rotate(li[i], angleStart);
+    }
+  }
+
+  $('.selector button').click(function (e) {
+    toggleOptions($(this).parent());
+  });
+
+  setTimeout(function () { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+    
+        <!--Fim animação-->
+    
+      </section>
+
+
+
+
+
+
+</ion-content>
